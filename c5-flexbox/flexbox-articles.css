@@ -1,0 +1,46 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.post__list {
+  display: flex;
+  align-items: strech;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: -1rem;
+}
+
+.post__item {
+  margin-left: 1rem;
+  width: calc((100% / 3) - 1rem);
+}
+.post__item-image {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+.post__item-content {
+  border: 1px solid black;
+  height: calc(100% - 10rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  line-height: 1.5;
+  padding: 1rem;
+}
+.post__item-author {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=flexbox-articles.css.map */

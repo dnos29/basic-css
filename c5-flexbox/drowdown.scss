@@ -1,0 +1,102 @@
+@import "_base.scss";
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+body {
+	background-color: #f3faff;
+}
+.dropdown {
+	width: 40rem;
+	cursor: pointer;
+	position: relative;
+	&__selected {
+		padding: 2rem 2.5rem 2rem 4rem;
+		background-color: $primary-color;
+		color: white;
+		display: flex;
+		align-items: center;
+	}
+	&__list {
+		// margin-top: 2rem;
+		// background-color: plum;
+		border-radius: 4px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		background-color: white;
+		position: absolute;
+		top: 100%;
+		margin-top: 3rem;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.25s linear;
+		&::before {
+			content: "";
+			position: absolute;
+			@include size(2rem);
+			// border-top: 1rem solid transparent;
+			// border-left: 1rem solid transparent;
+			// border-right: 1rem solid transparent;
+			// border-bottom: 1rem solid white;
+			background-color: white;
+			border-radius: 4px;
+			z-index: -1;
+			right: 2rem;
+			top: 0;
+			transform: translateY(-50%) rotate(-45deg);
+		}
+		&::after {
+			content: "";
+			@include size(100%, 3rem);
+			background-color: transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-100%);
+		}
+	}
+	&__item--title {
+		margin-left: 3rem;
+	}
+	&__icon--caret {
+		margin-left: auto;
+	}
+	&__item {
+		padding: 2rem 2.5rem 2rem 4rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+		color: rgb(110, 105, 105);
+		transition: color 0.2s linear;
+		border-left: 3px solid transparent;
+		&:not(:last-child) {
+			border-bottom: 1px solid #eee;
+		}
+		&:hover {
+			color: black;
+			cursor: pointer;
+			border-left-color: $primary-color;
+		}
+		// &:hover::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 0;
+		// 	width: 4px;
+		// 	height: 100%;
+		// 	background-color: $primary-color;
+		// }
+		&-icons {
+			font-size: 20px;
+		}
+		&--title {
+			font-size: 20px;
+		}
+	}
+	&:hover {
+		.dropdown__list {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

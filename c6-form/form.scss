@@ -1,0 +1,186 @@
+@import "../_base.scss";
+* {
+	box-sizing: border-box;
+}
+body {
+	padding: 2rem;
+}
+.checkbox {
+	&__input {
+		display: none;
+		&:checked + .checkbox__label::after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__label {
+		position: relative;
+		padding-left: 5rem;
+		cursor: pointer;
+		&::before {
+			content: "";
+			@include size(4rem);
+			background-color: purple;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 1rem;
+		}
+		&::after {
+			content: "";
+			@include size(2rem, 1rem);
+			border-left: 2px solid white;
+			border-bottom: 2px solid white;
+			position: absolute;
+			left: 1rem;
+			top: 0;
+			transform: rotate(-45deg);
+			transition: 0.5s linear;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+.radio {
+	&__input {
+		display: none;
+		&:checked + .radio__label::before {
+			background-color: #fc566f;
+			box-shadow: 0 0 0 4px #fff, 0 0 0 6px #fc566f;
+		}
+	}
+	&__label {
+		padding-left: 3rem;
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			@include size(2rem, 2rem);
+			background-color: #eee;
+			border-radius: 50%;
+			box-shadow: 0 0 0 2px #eee, 0 0 0 4px #b7c1ce;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: 0.5s linear;
+		}
+	}
+}
+.toggle {
+	&__input {
+		display: none;
+		&:checked + .toggle__label {
+			background-color: #fc566f;
+		}
+		&:checked + .toggle__label::before {
+			left: unset;
+			right: 0.5rem;
+		}
+	}
+	&__label {
+		@include size(8rem, 4rem);
+		background-color: gray;
+		border-radius: 4rem;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s linear;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			@include size(3rem);
+			background-color: white;
+			border-radius: 50%;
+			left: 0.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all 0.5s linear;
+		}
+	}
+}
+.toggle2 {
+	&__input {
+		&:checked + .toggle2__label {
+			background-color: #fc566f;
+			.toggle2__spin {
+				transform: translateX(4rem);
+			}
+		}
+	}
+	&__label {
+		@include size(8rem, 4rem);
+		background-color: gray;
+		border-radius: 4rem;
+		display: inline-block;
+		cursor: pointer;
+		transition: 0.5s linear;
+		padding: 5px;
+	}
+	&__spin {
+		@include size(3rem);
+		background-color: white;
+		border-radius: 50%;
+		transition: all 0.5s linear;
+	}
+}
+.input-style {
+	padding: 1rem 1rem;
+	border: 1px solid #a5a5a5;
+	border-radius: 6px;
+	outline: none;
+	width: 100%;
+	color: black;
+	transition: 0.5s linear;
+	&:focus {
+		border-color: #fc566f;
+		box-shadow: 0 0 0 2px #ffe1de;
+	}
+	&::-webkit-input-placeholder {
+		color: #a5a5a5;
+	}
+}
+.btn-style {
+	width: 100%;
+	margin-top: 1rem;
+	color: white;
+	padding: 2rem;
+	font-size: 2rem;
+	background-color: #fd607d;
+	border-radius: 6px;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	transition: 0.1s linear;
+	&:hover {
+		background-color: #ffe1de;
+		color: #fd607d;
+	}
+	&:active {
+		transform: translateY(3px);
+		box-shadow: 0 2px 0 0 #c74b62;
+	}
+}
+// .toggle {
+// 	@include size(8rem, 4rem);
+// 	background-color: gray;
+// 	border-radius: 4rem;
+// 	position: relative;
+// 	&::before {
+// 		content: "";
+// 		position: absolute;
+// 		@include size(3rem);
+// 		background-color: white;
+// 		border-radius: 50%;
+// 		left: 0.5rem;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 	}
+// }
+// .tradio {
+// 	@include size(2rem, 2rem);
+// 	background-color: #eee;
+// 	border-radius: 50%;
+// 	// box-shadow: 0 0 0 4px #fff, 0 0 0 6px #fc566f;
+// 	box-shadow: 0 0 0 4px #eee, 0 0 0 6px #b7c1ce;
+// }

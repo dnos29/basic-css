@@ -1,0 +1,17 @@
+:root {
+	--spacing: 5rem;
+}
+html {
+	font-size: 62.5%;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+img {
+	display: block;
+	width: 100%;
+}

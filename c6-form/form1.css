@@ -1,0 +1,182 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #e3e6f3;
+  padding: 2rem;
+}
+
+.form__signin {
+  margin: 0 auto;
+  padding: 5rem 7rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 120rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+.form__signin--form, .form__signin--image {
+  width: 50%;
+}
+.form__signin--form {
+  padding-right: 3rem;
+}
+.form__signin--heading {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #380065;
+  margin-bottom: 2rem;
+}
+.form__signin_heading_note {
+  color: #ff0043;
+  padding-left: 7rem;
+  position: relative;
+  font-weight: bolder;
+}
+.form__signin_heading_note::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: #ff0043;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form__signin-socicals {
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: -1rem;
+}
+.form__signin-google, .form__signin-facebook {
+  width: calc(50% - 1rem);
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.form__signin--icons {
+  margin-right: 1rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+.form__signin .form__input--group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 0 2rem;
+}
+.form__signin .form__input--group label {
+  margin-bottom: 3px;
+  display: inline-block;
+}
+.form__signin .form__input--inline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: -1rem;
+  margin-top: 2rem;
+}
+.form__signin .form__input--inline-item {
+  width: calc(50% - 1rem);
+  margin-left: 1rem;
+}
+.form__signin .form__input_checkbox {
+  display: none;
+}
+.form__signin .form__input_checkbox:checked + .form__input_label::after {
+  opacity: 1;
+  visibility: visible;
+}
+.form__signin .form__input_checkbox:checked + .form__input_label::before {
+  background-color: #ff0043;
+}
+.form__signin .form__input_label {
+  padding-left: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+.form__signin .form__input_label::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fafaff;
+  border: 1px solid #eee;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  transition: 0.25s linear;
+}
+.form__signin .form__input_label::after {
+  content: "";
+  width: 1.2rem;
+  height: 0.5rem;
+  position: absolute;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  left: 3px;
+  top: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s linear;
+}
+.form__signin .form__input--button {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  border: none;
+  background: #ff0043;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 6px 0 rgba(255, 0, 68, 0.219);
+}
+.form__signin .form__control {
+  padding: 1rem 2rem;
+  outline: none;
+  background-color: #fafaff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  width: 100%;
+}
+.form__signin .signIn-text {
+  margin-top: 3rem;
+}
+.form__signin .signIn-text a {
+  color: #ff0043;
+  text-decoration: none;
+}
+.form__signin img {
+  height: 46rem;
+}
+
+/*# sourceMappingURL=form1.css.map */

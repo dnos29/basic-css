@@ -1,0 +1,38 @@
+$primary-color: dodgerblue;
+
+html {
+	font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.6rem;
+	font-family: "Poppins", sans-serif;
+}
+
+@mixin size($width, $heigth: $width) {
+	width: $width;
+	height: $heigth;
+}
+
+@mixin flexbox(
+	$align: flex-start,
+	$justify: flex-start,
+	$flex-direction: row,
+	$wrap: nowrap
+) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $flex-direction;
+	flex-wrap: $wrap;
+}
+
+@mixin maxWidth($value) {
+	@media screen and (max-width: $value) {
+		@content;
+	}
+}

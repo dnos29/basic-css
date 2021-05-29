@@ -1,0 +1,158 @@
+@import "../_base.scss";
+$main-color: #ff0043;
+$secondary-color: #380065;
+@mixin inputInline() {
+	width: calc(50% - 1rem);
+}
+body {
+	background-color: #e3e6f3;
+	padding: 2rem;
+}
+.form__signin {
+	margin: 0 auto;
+	padding: 5rem 7rem;
+	@include flexbox(stretch);
+	max-width: 120rem;
+	background-color: white;
+	border-radius: 2rem;
+	&--form,
+	&--image {
+		width: 50%;
+	}
+	&--form {
+		padding-right: 3rem;
+	}
+	&--heading {
+		font-size: 5rem;
+		font-weight: bold;
+		color: $secondary-color;
+		margin-bottom: 2rem;
+	}
+	&_heading_note {
+		color: $main-color;
+		padding-left: 7rem;
+		position: relative;
+		font-weight: bolder;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 5rem;
+			height: 1px;
+			background-color: $main-color;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&-socicals {
+		margin-top: 3rem;
+		@include flexbox(flex-start);
+		margin-left: -1rem;
+	}
+	&-google,
+	&-facebook {
+		@include inputInline();
+		margin-left: 1rem;
+		padding: 1rem 2rem;
+		border: 1px solid #eee;
+		border-radius: 8px;
+	}
+	&--icons {
+		margin-right: 1rem;
+		display: inline-block;
+		border-radius: 50%;
+	}
+	.form__input {
+		&--group {
+			@include flexbox(flex-start, flex-start, column);
+			margin: 0 0 2rem;
+			label {
+				margin-bottom: 3px;
+				display: inline-block;
+			}
+		}
+		&--inline {
+			@include flexbox();
+			margin-left: -1rem;
+			margin-top: 2rem;
+			&-item {
+				width: calc(50% - 1rem);
+				margin-left: 1rem;
+			}
+		}
+		&_checkbox {
+			display: none;
+			&:checked + .form__input_label::after {
+				opacity: 1;
+				visibility: visible;
+			}
+			&:checked + .form__input_label::before {
+				background-color: $main-color;
+			}
+		}
+		&_label {
+			padding-left: 3rem;
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: "";
+				position: absolute;
+				@include size(2rem);
+				background-color: #fafaff;
+				border: 1px solid #eee;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 3px;
+				transition: 0.25s linear;
+			}
+			&::after {
+				content: "";
+				@include size(1.2rem, 0.5rem);
+				position: absolute;
+				// background-color: yellow;
+				border-left: 2px solid white;
+				border-bottom: 2px solid white;
+				transform: rotate(-45deg);
+				left: 3px;
+				top: 6px;
+				opacity: 0;
+				visibility: hidden;
+				transition: 0.25s linear;
+			}
+		}
+		&--button {
+			@include size(5rem, 5rem);
+			margin-top: 3rem;
+			padding: 1.5rem;
+			border-radius: 1.2rem;
+			border: none;
+			background: $main-color;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			cursor: pointer;
+			box-shadow: 0 6px 6px 0 rgba(255, 0, 68, 0.219);
+		}
+	}
+	.form__control {
+		padding: 1rem 2rem;
+		outline: none;
+		background-color: #fafaff;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		width: 100%;
+	}
+	.signIn-text {
+		margin-top: 3rem;
+		a {
+			color: $main-color;
+			text-decoration: none;
+		}
+	}
+	img {
+		height: 46rem;
+	}
+}

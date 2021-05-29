@@ -1,0 +1,310 @@
+.boxed {
+	width: 10rem;
+	height: 10rem;
+	background-color: dodgerblue;
+	/* transform: scale(2, 3); */
+	transform: translate(5rem, 5rem);
+	/* transform: rotate(30deg); */
+	/* transform: skew(-30deg, -30deg); */
+	/* transform: matrix(); */
+}
+.wapper-box2 {
+	width: 100%;
+	height: 30rem;
+	background-color: goldenrod;
+	position: relative;
+	/* position: absolute; */
+	/* position: relative; */
+}
+.boxed2 {
+	width: 10rem;
+	height: 10rem;
+	background-color: dodgerblue;
+	/* positioned with ancestor element */
+	position: absolute;
+	/* bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0; */
+	right: 0;
+	/* top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+}
+body {
+	/* padding-top: 10rem; */
+	/* khong nen dung kem position: fixed */
+	/* transform: translate(3rem, 3rem); */
+	margin: 0;
+}
+.header {
+	width: 100%;
+	height: 10rem;
+	background-color: green;
+	/* chi chay theo body */
+	position: fixed;
+	top: 0;
+	/* bottom: 0; */
+}
+/* pratice1-modal */
+.modal {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	/* ko dung absolute vi fixed  theo body */
+	position: fixed;
+}
+.modal__content {
+	background-color: white;
+	width: 80%;
+	height: 80%;
+	bottom: 0;
+	border-radius: 8px;
+	padding: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* practice 2 */
+.body2 {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to right bottom, #3481e5, #fff);
+}
+.modal2 {
+	width: 80%;
+	height: 60%;
+	background-color: white;
+	border-radius: 8px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.video__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.video--play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 10rem;
+	color: #fff;
+}
+.card {
+	width: 40rem;
+	height: 60rem;
+	background-color: dodgerblue;
+	position: relative;
+}
+.sale--off {
+	background-color: firebrick;
+	color: white;
+	padding: 5px;
+	position: absolute;
+	border-radius: 8px;
+	right: 8px;
+	top: 8px;
+}
+/* practice4 */
+.bar {
+	margin: 10rem auto 0;
+	width: 30rem;
+	height: 1rem;
+	background-color: #ccc;
+	border-radius: 5px;
+	position: relative;
+}
+.playing {
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	background-color: teal;
+	border-radius: inherit;
+}
+.dot {
+	width: 2rem;
+	height: 2rem;
+	background-color: teal;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	transform: translate(50%, -25%);
+}
+/* c2: chia playing ~ dot.  */
+.line {
+	text-align: center;
+	position: relative;
+}
+.line::after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: yellowgreen;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.line--text {
+	display: inline-block;
+	background-color: white;
+	padding: 0 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.icon {
+	width: 6rem;
+	height: 6rem;
+	color: purple;
+	border-radius: 4px;
+	margin: 0 auto;
+	position: relative;
+}
+.icon::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: currentColor;
+	opacity: 0.2;
+	border-radius: inherit;
+}
+.icon--user {
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.effect {
+	display: inline-block;
+	margin: 1rem 10rem 0;
+	text-align: center;
+	border: 1px solid black;
+	padding: 1rem 4rem;
+	text-decoration: none;
+	position: relative;
+}
+.effect::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/* right: 0;
+	bottom: 0; */
+	background-color: tomato;
+	z-index: -1;
+	transition: width 0.5s linear;
+}
+.effect:hover:before {
+	width: 100%;
+}
+
+.effect:hover {
+	color: white;
+}
+
+.box-animation {
+	width: 10rem;
+	height: 10rem;
+	background-color: dodgerblue;
+	animation-name: move;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes move {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(20rem);
+	}
+}
+
+.wapper {
+	height: 30rem;
+	background-color: powderblue;
+	position: relative;
+}
+.animation-loading {
+	width: 10rem;
+	height: 10rem;
+	background-color: plum;
+	border-radius: 50%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.animation-loading::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	border-radius: inherit;
+	animation: loading 1s infinite alternate linear;
+}
+@keyframes loading {
+	/* from {
+		transform: scale(1);
+		opacity: 1;
+	} */
+	to {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+.double-circle {
+	text-align: center;
+	margin: 1rem;
+	/* transform: rotate(90deg); */
+	animation: double-loading 2s infinite;
+}
+.animation-cirle {
+	width: 5rem;
+	height: 5rem;
+	background-color: white;
+	border: 2px solid purple;
+	border-radius: 50%;
+	display: inline-block;
+	margin-left: 5px;
+}
+.animation-cirle:first-of-type {
+	border: 2px solid cyan;
+}
+@keyframes double-loading {
+	0% {
+	}
+	50% {
+		transform: rotate(200deg);
+	}
+	75% {
+		transform: rotate(160deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,181 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem;
+}
+
+.checkbox__input {
+  display: none;
+}
+.checkbox__input:checked + .checkbox__label::after {
+  opacity: 1;
+  visibility: visible;
+}
+.checkbox__label {
+  position: relative;
+  padding-left: 5rem;
+  cursor: pointer;
+}
+.checkbox__label::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-color: purple;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1rem;
+}
+.checkbox__label::after {
+  content: "";
+  width: 2rem;
+  height: 1rem;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: rotate(-45deg);
+  transition: 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.radio__input {
+  display: none;
+}
+.radio__input:checked + .radio__label::before {
+  background-color: #fc566f;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #fc566f;
+}
+.radio__label {
+  padding-left: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+.radio__label::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #eee;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #eee, 0 0 0 4px #b7c1ce;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s linear;
+}
+
+.toggle__input {
+  display: none;
+}
+.toggle__input:checked + .toggle__label {
+  background-color: #fc566f;
+}
+.toggle__input:checked + .toggle__label::before {
+  left: unset;
+  right: 0.5rem;
+}
+.toggle__label {
+  width: 8rem;
+  height: 4rem;
+  background-color: gray;
+  border-radius: 4rem;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+.toggle__label::before {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s linear;
+}
+
+.toggle2__input:checked + .toggle2__label {
+  background-color: #fc566f;
+}
+.toggle2__input:checked + .toggle2__label .toggle2__spin {
+  transform: translateX(4rem);
+}
+.toggle2__label {
+  width: 8rem;
+  height: 4rem;
+  background-color: gray;
+  border-radius: 4rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s linear;
+  padding: 5px;
+}
+.toggle2__spin {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.5s linear;
+}
+
+.input-style {
+  padding: 1rem 1rem;
+  border: 1px solid #a5a5a5;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  color: black;
+  transition: 0.5s linear;
+}
+.input-style:focus {
+  border-color: #fc566f;
+  box-shadow: 0 0 0 2px #ffe1de;
+}
+.input-style::-webkit-input-placeholder {
+  color: #a5a5a5;
+}
+
+.btn-style {
+  width: 100%;
+  margin-top: 1rem;
+  color: white;
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: #fd607d;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  transition: 0.1s linear;
+}
+.btn-style:hover {
+  background-color: #ffe1de;
+  color: #fd607d;
+}
+.btn-style:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 #c74b62;
+}
+
+/*# sourceMappingURL=form.css.map */

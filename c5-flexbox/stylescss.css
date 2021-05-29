@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+p {
+  color: #ffa400;
+}
+
+.header-top {
+  color: green;
+}
+.header-top:hover {
+  color: purple;
+}
+.header-content {
+  font-size: 20rem;
+}
+
+.boxed {
+  width: 10rem;
+  height: 15rem;
+  background-color: #ffa400;
+}
+
+.container {
+  width: 100%;
+  height: 30rem;
+  background-color: plum;
+  position: relative;
+}
+.container .boxing {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=stylescss.css.map */

@@ -1,0 +1,122 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 5rem;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.title::after {
+  content: "";
+  width: 5rem;
+  height: 3px;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tags-container {
+  display: flex;
+  align-items: center;
+}
+.tags__item {
+  text-decoration: none;
+  border-radius: 2rem 0 2rem 2rem;
+  border: 2px solid dodgerblue;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+.tags__item:not(:first-child) {
+  margin-left: 2rem;
+}
+.tags__item.active {
+  background-color: dodgerblue;
+}
+.tags__item.active > a {
+  color: white;
+}
+.tags__view-all {
+  background-color: rgba(30, 143, 255, 0.3);
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+.tags__view-all::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+}
+
+.humans {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -2rem;
+}
+.humans__item {
+  width: calc(25% - 2rem);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 2rem;
+}
+.humans__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  .humans__item {
+    width: calc(50% - 2rem);
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .humans__item {
+    width: calc(100% - 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .tags {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tags-container {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .tags__item {
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=flex-layout.css.map */

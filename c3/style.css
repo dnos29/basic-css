@@ -1,0 +1,160 @@
+:root {
+	--primary-color: #00aefd;
+	--secondary-color: #ffa400;
+}
+.boxed {
+	width: 20rem;
+	height: 20rem;
+	background-image: linear-gradient(
+		to right,
+		var(--primary-color) 60%,
+		var(--secondary-color) 80%
+	);
+	background-image: linear-gradient(
+		to right top,
+		var(--primary-color),
+		var(--secondary-color)
+	);
+}
+/* khi nao % sau < % truoc. % dau la thuc, 100 - % sau = thuc cua mau sau
+% sau - % truoc = %tron
+
+*/
+.gradient-text {
+	font-size: 3rem;
+	font-weight: bold;
+	display: inline-block;
+	color: dodgerblue;
+}
+@supports (-webkit-background-clip: text) {
+	.gradient-text {
+		color: transparent;
+		background-image: linear-gradient(
+			to right bottom,
+			var(--primary-color),
+			var(--secondary-color)
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+	}
+}
+.backrground-duplicate {
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(0, 173, 253, 0.8),
+			rgba(255, 166, 0, 0.8)
+		),
+		url("https://images.unsplash.com/photo-1620354599715-a42fe76d85cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+.shadow {
+	width: 20rem;
+	height: 20rem;
+	background-color: dodgerblue;
+	margin: 1rem auto;
+	/* box-shadow: x y blur scale color */
+	box-shadow: 0 0 5px 5px var(--secondary-color);
+}
+.text-shadow {
+	font-size: 4rem;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px dodgerblue;
+}
+.btn-container {
+	margin-bottom: 2rem;
+}
+.btn {
+	padding: 1rem 0;
+	color: white;
+	border-radius: 6px;
+	border: none;
+	text-align: center;
+	text-transform: uppercase;
+	margin-right: 1rem;
+	font-size: 16px;
+	font-weight: bold;
+	width: 12rem;
+	display: inline-block;
+}
+.btn--success {
+	background: linear-gradient(to right, #68ecad, #50cdc5);
+	box-shadow: 0px 10px 10px 0 rgba(80, 205, 197, 0.2);
+}
+.btn--info {
+	background: linear-gradient(to right, #ace4ff, #79b5ed);
+	box-shadow: 0 10px 10px 0 rgb(121, 181, 237, 0.2);
+}
+.btn--buy-now {
+	background: linear-gradient(to right, #afbfff, #ae8bf1);
+	box-shadow: 0 10px 10px 0 rgb(174, 139, 241, 0.2);
+}
+.btn--warning {
+	background: linear-gradient(to right, #fad597, #f2a05f);
+	box-shadow: 0 10px 10px 0 rgba(242, 161, 95, 0.2);
+}
+.btn--contact {
+	background: linear-gradient(to right, #f5c0ad, #ec7472);
+	box-shadow: 0 10px 10px 0 rgba(236, 116, 114, 0.2);
+}
+.btn--delete {
+	background: linear-gradient(to right, #f1aab7, #ec839c);
+	box-shadow: 0 10px 10px 0 rgba(236, 131, 155, 0.2);
+}
+
+.text-gradient3 {
+	font-size: 32px;
+	display: inline;
+	color: transparent;
+	background: linear-gradient(to right bottom, #38dbb2, #00aefd);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.color__item {
+	display: inline-block;
+	width: 8rem;
+	height: 8rem;
+	border-radius: 8px;
+	background-color: black;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+.color__item:first-child {
+	background-color: #a24bf0;
+	transition: background-color 2s linear;
+}
+.color__item:nth-child(2) {
+	background-color: #38dbb2;
+}
+.color__item:nth-child(3) {
+	background-color: #25c2e3;
+}
+.color__item:nth-child(4) {
+	background-color: #ea344f;
+}
+.color__item:nth-of-type(5) {
+	background-color: #dd44a7;
+}
+.color__item:last-of-type {
+	background-color: #f7ac2a;
+}
+.color__item:first-child:hover {
+	background-color: #f7ac2a;
+}
+
+div[data-link^="https"] {
+	color: dodgerblue;
+}
+div[data-link$=".vn"] {
+	text-transform: uppercase;
+}
+div[data-name*="hello"] {
+	color: #68ecad;
+}
+input[type="email"] {
+	background-color: #ace4ff;
+}
+input[name="fullname"] {
+	background-color: #f2a05f;
+}

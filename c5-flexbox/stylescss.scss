@@ -1,0 +1,70 @@
+$primary-color: #ffa400;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+p {
+	color: $primary-color;
+}
+
+.header {
+	&-top {
+		color: green;
+		&:hover {
+			color: purple;
+		}
+	}
+	&-content {
+		font-size: 20rem;
+	}
+}
+
+// @mixin mixinName(){}
+
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+@mixin bg($background: black) {
+	background-color: $background;
+}
+@mixin centerbox($direction: "both") {
+	position: absolute;
+	@if $direction == "both" {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@if $direction == "left" {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@if $direction == "top" {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.boxed {
+	@include size(10rem, 15rem);
+	background-color: $primary-color;
+}
+
+.container {
+	width: 100%;
+	height: 30rem;
+	background-color: plum;
+	position: relative;
+
+	.boxing {
+		@include size(10rem);
+		@include bg(white);
+		// @include centerbox();
+		// @include centerbox("left");
+		@include centerbox("top");
+	}
+}

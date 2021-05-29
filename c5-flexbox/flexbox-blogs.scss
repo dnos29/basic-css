@@ -1,0 +1,121 @@
+@import "_base";
+
+.editor-pick {
+	max-width: 100rem;
+	background-color: white;
+	padding: 2rem;
+	border: 1px solid black;
+	margin: 1rem auto;
+	@include flexbox(stretch, space-between, row, wrap);
+	.feature__post {
+		@include flexbox(flex-start, flex-start, column);
+		width: calc(50% - 2rem);
+		margin-right: 2rem;
+		&-media {
+			position: relative;
+			border-radius: 10px;
+			.post__tag {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				padding: 5px 1rem;
+				border-radius: 2rem;
+				color: white;
+				font-size: 1.2rem;
+				background: linear-gradient(to right, red, orange);
+			}
+		}
+		&-image {
+			width: 100%;
+			height: 30rem;
+			object-fit: cover;
+			border-radius: inherit;
+		}
+		&-dot {
+			width: 4rem;
+			height: 4rem;
+			background: linear-gradient(to right bottom, red, orange);
+			border-radius: 50%;
+			position: absolute;
+			right: 2rem;
+			bottom: 0;
+			transform: translateY(50%);
+			z-index: 1;
+			@include flexbox(center, center);
+			color: white;
+		}
+		&-info {
+			@include flexbox(center);
+			color: grey;
+			margin: 1rem 0;
+		}
+		&-author-avatar {
+			width: 4rem;
+			height: 4rem;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+		&-author {
+			margin: 0 1rem;
+			padding-right: 2rem;
+			position: relative;
+			&::after {
+				content: "";
+				@include size(5px);
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		&-title {
+			font-size: 3rem;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+		&-desc {
+			line-height: 1.5;
+			color: grey;
+		}
+	}
+	.post__list {
+		width: calc(50% - 2rem);
+	}
+	.post__item {
+		@include flexbox(center);
+		padding-bottom: 2rem;
+		&:not(:first-child) {
+			padding-top: 2rem;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+		}
+		&-image {
+			width: 15rem;
+			object-fit: cover;
+		}
+		&-content {
+			padding: 2rem;
+		}
+		&-title {
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+		&-date {
+			color: grey;
+		}
+	}
+}
+
+@include maxWidth(767px) {
+	.editor-pick {
+		.feature__post {
+			width: 100%;
+		}
+		.post__list {
+			width: 100%;
+		}
+	}
+}

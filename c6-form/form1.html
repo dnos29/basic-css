@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./form1.css" />
+		<title>Forms 1</title>
+	</head>
+	<body>
+		<div class="form__signin">
+			<div class="form__signin--form">
+				<h1 class="form__signin--heading">Sign up</h1>
+				<h2 class="form__signin_heading_note">Sign up with</h2>
+				<div class="form__signin-socicals">
+					<div class="form__signin-google">
+						<i class="fa fa-google form__signin--icons"></i> Sign up with google
+					</div>
+					<div class="form__signin-facebook">
+						<i class="fa fa-facebook-official form__signin--icons"></i> Sign up
+						with google
+					</div>
+				</div>
+				<div class="form__input--inline">
+					<div class="form__input--inline-item">
+						<div class="form__input--group">
+							<label for="name">Name</label>
+							<input
+								type="text"
+								class="form__control form__control-email"
+								name="name"
+								placeholder="Name"
+								id="name"
+							/>
+						</div>
+					</div>
+					<div class="form__input--inline-item">
+						<div class="form__input--group">
+							<label for="email">Email</label>
+							<input
+								type="text"
+								class="form__control form__control-name"
+								name="email"
+								placeholder="Email"
+								id="email"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="form__input--group">
+					<label for="password">Password</label>
+					<input
+						placeholder="Passoword"
+						type="password"
+						class="form__control"
+						name="password"
+						id="password"
+					/>
+				</div>
+				<div class="custom_checkbox">
+					<input
+						type="checkbox"
+						name=""
+						id="form__input_checkbox"
+						class="form__input_checkbox"
+					/>
+					<label for="form__input_checkbox" class="form__input_label"
+						>I've read and agree of service and our Privacy Policy</label
+					>
+				</div>
+				<button class="form__input--button">
+					<i class="fa fa-arrow-right"></i>
+				</button>
+				<p class="signIn-text">
+					Already have an account? <a href="#">Sign in</a>
+				</p>
+			</div>
+			<img
+				src="https://images.unsplash.com/photo-1546546274-1703737efede?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+				alt=""
+				class="form__signin--image"
+			/>
+		</div>
+	</body>
+</html>

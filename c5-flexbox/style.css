@@ -1,0 +1,35 @@
+.fruit-list {
+	display: flex;
+	height: 20rem;
+	margin-top: 1rem;
+	margin-left: calc(-1 * var(--spacing));
+	/* justify-content: space-between; */
+	/* flex-flow: wrap; */
+}
+.fruit__item {
+	width: calc((100% / 3) - var(--spacing));
+	margin-left: var(--spacing);
+	margin-bottom: var(--spacing);
+	border-radius: 6px;
+}
+.fruit__item-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+.boxed {
+	/* width: 10rem;
+	height: 10rem; */
+	/* background-color: dodgerblue;  */
+	margin: 10rem auto;
+	display: inline-block;
+	/* border-top: 10rem solid orange;
+	border-right: 10rem solid green;
+	border-bottom: 10rem solid cyan;
+	border-left: 10rem solid purple; */
+
+	border-right: 10rem solid transparent;
+	border-bottom: 10rem solid cyan;
+	border-left: 10rem solid transparent;
+}
